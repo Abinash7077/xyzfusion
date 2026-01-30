@@ -6,7 +6,7 @@ export default function Features() {
   return (
     <section className="bg-white py-24">
       <div className="px-10 mx-auto grid md:grid-cols-3 gap-16">
-        <div className="flex items-start gap-6">
+        <div className="flex items-start gap-6 ">
           <div className="w-20 min-w-20 h-20 rounded-full bg-pink-500 flex items-center justify-center text-white text-2xl">
             <FiTarget className="w-20 h-10" />
           </div>

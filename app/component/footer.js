@@ -20,14 +20,12 @@ export default function Footer() {
               X
             </div>
             <span className="text-3xl font-bold text-slate-900">
-              XYZ Fusion
+              XYZFusion
             </span>
           </div>
 
           <p className="text-gray-500 leading-relaxed text-justify mb-6">
-            XYZ Fusion is the leading Master Data Management platform
-            helping enterprises achieve data excellence. Trusted by
-            Fortune 500 companies worldwide.
+           Next-generation master data management for the modern enterprise.
           </p>
 
           <div className="flex gap-5 text-slate-400 text-lg">
