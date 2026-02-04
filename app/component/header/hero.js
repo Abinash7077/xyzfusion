@@ -1,6 +1,7 @@
 "use client";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { Typewriter } from "@/utils/utils";
 export default function Hero() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
@@ -18,15 +19,14 @@ export default function Hero() {
           className="mt-6 md:mt-10"
         >
           <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-slate-900 leading-snug md:leading-tight mb-4 md:mb-8">
-            Transform Your Enterprise Data into Your Most Valuable Strategic
-            Asset
+           <Typewriter play={isInView} text="Transform Your Enterprise Data into Your Most Valuable Strategic Asset" />
           </h1>
 
           <p className="text-slate-500 text-sm sm:text-base md:text-lg max-w-3xl mb-8 md:mb-12 leading-relaxed">
-            XYZ Fusion delivers comprehensive Master Data Management solutions
+           <Typewriter play={isInView} text="XYZ Fusion delivers comprehensive Master Data Management solutions
             that create a single source of truth across your organization.
             Streamline operations, ensure compliance, and drive data-driven
-            decision making with our enterprise-grade MDM platform.
+            decision making with our enterprise-grade MDM platform." />
           </p>
 
           <motion.div
