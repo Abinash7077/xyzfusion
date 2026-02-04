@@ -8,14 +8,35 @@ import {
   FiBell,
 } from "react-icons/fi";
 import { FaRocket } from "react-icons/fa";
-
+import React,{useRef} from "react";
+import {motion,useInView} from "framer-motion";
+import { Typewriter } from "../../utils/utils";
 export default function Quality() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false });
   return (
     <section className="bg-white py-10">
-      <div className="px-10 mx-auto text-center">
-        <h2 className="text-[45px] font-bold text-slate-900 mb-4">
-          Comprehensive Features for <span className="text-cyan-400">Enterprise</span>  <br /> <span className="text-blue-400">Data Management</span> 
-        </h2>
+    <div ref={ref} className="px-10 mx-auto text-center">
+
+  <motion.h2
+    initial={{ opacity: 0, y: 20 }}
+    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+    transition={{ duration: 0.5 }}
+    className="text-[45px] font-bold text-slate-900 mb-4"
+  >
+    <Typewriter play={isInView} text="Comprehensive Features for " />
+
+    <span className="text-cyan-400">
+      <Typewriter play={isInView} text="Enterprise" />
+    </span>
+
+    <br />
+
+    <span className="text-blue-400">
+      <Typewriter play={isInView} text="Data Management" />
+    </span>
+  </motion.h2>
+
 
         <p className="text-slate-500 max-w-2xl mx-auto mb-20">
           Powerful capabilities designed to govern, unify, and optimize

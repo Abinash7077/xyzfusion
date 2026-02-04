@@ -1,8 +1,7 @@
 export default function CTA() {
   return (
-    <section className="relative bg-indigo-600 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center">
-
+<section className="relative bg-blue-600 text-white overflow-hidden">
+      <div className="mx-auto px-10 py-24 grid md:grid-cols-2 gap-12 items-center">
         <div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
             Contact Sales
