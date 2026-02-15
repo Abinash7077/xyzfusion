@@ -1,0 +1,2 @@
+1. Authentication:-
+LoginField,Registration Field and role (Can we create a role screen to dynamically change role?)

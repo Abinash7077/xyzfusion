@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { CiLight } from "react-icons/ci";
 import { FiMenu, FiX } from "react-icons/fi";
-
+import Link from "next/link";
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -48,7 +48,8 @@ export default function Header() {
             />
           </button>
 
-          <button
+          <Link
+          href='/user/auth/login'
             className={`hidden md:block ${
               scrolled
                 ? "text-gray-500 hover:text-slate-900"
@@ -56,9 +57,9 @@ export default function Header() {
             } font-bold`}
           >
             Sign In
-          </button>
+          </Link>
 
-          <button
+          <Link href='/user/auth/register'
             className={`hidden md:block px-6 py-2 rounded-full ${
               !scrolled
                 ? "bg-white/20 backdrop-blur-md"
@@ -66,7 +67,7 @@ export default function Header() {
             } text-white hover:bg-white/30 transition`}
           >
             Sign Up
-          </button>
+          </Link>
 
           {/* Mobile Menu Button */}
           <button
@@ -90,9 +91,10 @@ export default function Header() {
 
           <hr />
 
-          <button className="w-full text-left text-gray-700">
-            Sign In
-          </button>
+            <Link href='/user/auth/login'
+              className="w-full block text-left text-gray-700 hover:text-indigo-600 transition"
+            >
+            Sign In</Link>
 
           <button className="w-full bg-blue-600 text-white py-2 rounded-lg">
             Sign Up
